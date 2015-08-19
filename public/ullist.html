@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>tabChangeTest</title>
+</head>
+<script language="JavaScript" type="text/javascript">
+    function ChangeDiv(divId, divName, zDivCount) {
+        for (var i = 1; i <= zDivCount; i++) {
+            document.getElementById(divName + i).style.display = "none";
+        }
+        document.getElementById(divName + divId).style.display = "";
+    }
+</script>
+<body>
+<div id="zd-tabs">
+    <ul>
+        <li><a href="#zd-tab1" class="zd-a"><span onclick="JavaScript:ChangeDiv('1','zd-tab',4)">a</span></a></li>
+        <li><a href="#zd-tab2" class="zd-b"><span onclick="JavaScript:ChangeDiv('2','zd-tab',4)">b</span></a></li>
+        <li><a href="#zd-tab3" class="zd-c"><span onclick="JavaScript:ChangeDiv('3','zd-tab',4)">c</span></a></li>
+        <li style="margin-right: 0px ! important;">
+            <a href="#zd-tab4" class="zd-d"><span onclick="JavaScript:ChangeDiv('4','zd-tab',4)">d</span></a></li>
+    </ul>
+</div>
+
+
+<table class="zd-box" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+    <tr>
+        <td class="zd-box" id="zd-tabpanels">
+
+            <div class="zd-a zd-tabpanel" id="zd-tab1">
+                <ul>
+                    <li>内容一</li>
+                </ul>
+            </div>
+
+            <div class="zd-b zd-tabpanel" id="zd-tab2">
+                <ul>
+                    <li>内容二</li>
+                </ul>
+            </div>
+
+            <div class="zd-c zd-tabpanel" id="zd-tab3">
+                <ul>
+                    <li>内容三</li>
+                </ul>
+            </div>
+
+            <div class="zd-d zd-tabpanel" id="zd-tab4">
+                <ul>
+                    <li>内容四</li>
+                </ul>
+            </div>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
